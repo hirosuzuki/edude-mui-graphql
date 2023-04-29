@@ -1,8 +1,8 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18-bullseye",
-    // "dockerComposeFile": "docker-compose.yml",
-    // "service": "workspace",
-    // "remoteUser": "node",
-    // "workspaceFolder": "/workspace"
+    // "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18-bullseye",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "workspace",
+    "workspaceFolder": "/workspace",
     "name": "ETUDE-MUI-GRAPHQL"
+    // https://qiita.com/ayakix/items/db1da3e1f4e269d4dafb
 }
