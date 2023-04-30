@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  workspace:
+    # コンテナを起動させ続ける
+    tty: true
+    # working_dirディレクトリ下にホストのディレクトリをマウントします
+    working_dir: /workspace
+    volumes:
+      - .:/workspace:cached
