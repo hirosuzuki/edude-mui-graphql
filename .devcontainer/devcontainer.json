@@ -1,28 +1,37 @@
 {
-    // "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18-bullseye",
-    "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
-    "service": "workspace",
-    "workspaceFolder": "/workspace",
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker": "",
-        "ghcr.io/devcontainers-contrib/features/firebase-cli:2": ""
-	},
-    "postCreateCommand": "sudo apt -y update && sudo apt -y install postgresql-client",
-    "forwardPorts": [
-        "adminer:8080"
-    ],
-    "portsAttributes": {
-        "adminer:8080": {
-            "label": "Adminer",
-            "protocol": "http"
+  // "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18-bullseye",
+  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+  "service": "workspace",
+  "workspaceFolder": "/workspace",
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker": "",
+    "ghcr.io/devcontainers-contrib/features/firebase-cli:2": ""
+  },
+  "forwardPorts": ["adminer:8080"],
+  "portsAttributes": {
+    "adminer:8080": {
+      "label": "Adminer",
+      "protocol": "http"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mhutchie.git-graph",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ],
+      "settings": {
+        "files.encoding": "utf8",
+        "files.eol": "\n",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
         }
-    },
-    "customizations": {
-        "vscode": {
-            "extensions": ["mhutchie.git-graph"]
-        }
-    },
-    "name": "ETUDE-MUI-GRAPHQL"
-    // https://qiita.com/ayakix/items/db1da3e1f4e269d4dafb
+      }
+    }
+  },
+  "name": "ETUDE-MUI-GRAPHQL"
+  // https://qiita.com/ayakix/items/db1da3e1f4e269d4dafb
 }
